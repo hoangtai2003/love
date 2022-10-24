@@ -1,3 +1,11 @@
+// thêm nhạc
+var myMusic= document.getElementById("music");
+function play() {
+myMusic.play();
+}
+function pause() {
+myMusic.pause();
+}
 // ----------ấn click thì hiện ra bảng phần class="toast"
 const clickbutton = document.querySelector('#text')
   clickbutton.addEventListener("click", function(){

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("/img/love2.jpg");
+    background-size: cover;
+}
+#music {
+    margin-top: 24px;
+    margin-left: 34px;
+}
+.heart {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background: red;
+    transform: rotate(-45deg);
+    box-shadow:  -10px 10px 90px red;
+    animation: heart 0.6s linear infinite;
+    top: 46%;
+    left: 48%;
+}
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.00);
+    }
+    80% {
+        transform: rotate(-45deg) scale(0.90);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.80);
+    }
+}
+.heart::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: red;
+    top: -55%;
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px red;
+}
+.heart::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: red;
+    right: -55%;
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px red;
+}
+#text{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -300%);
+    font-size: 23px;
+    font-family: cursive;
+    color: #fc406f;
+    cursor: pointer;
+    opacity: 0;
+    animation: anime 1s forwards;
+    animation-delay: 5.7s;
+}
+@keyframes anime{
+    0%{
+        opacity: 0;
+    }
+    100%{
+         opacity: 1;
+    }
+        }
+        #text:hover{
+            color: red;
+            filter: drop-shadow(0 0 10px red);
+        }
+        .items{
+            position: absolute;
+            width: 0px;
+            height: 35px;
+            background: #ed1c24;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-450%);
+            opacity: 0;
+            animation: haha 2s forwards 4s;
+        }
+        @keyframes haha{
+            0%{
+                opacity: 0;
+                width: 0px;
+            }
+            50%{
+                opacity: 1;
+            }
+            90%{
+                opacity: 1;
+                width: 130px;
+            }
+            100%{
+                opacity: 0;
+                width: 130px;
+            }
+        }
+        .content-wrapper{
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 250px;
+            height: 30px;
+            border: 2px solid red;
+            opacity: 0;
+            cursor: pointer;
+            animation: number 2s forwards 2s;
+        }
+        @keyframes number{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 4vh;
+            color: red;
+            font-size: 20px;
+            font-family: cursive;
+        }
+        .text1{
+            padding-right: 5px;
+        }
+        .container{
+            display: none;
+        }
+        .toast{
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 2s;
+            animation: toast-button 2s ease-in-out forwards;
+            z-index: 1;
+        }
+        @keyframes toast-button{
+            0%{
+                transform: translateY(-100%);
+            }
+            80%{
+                transform: translateY(0%);
+            }
+            90%,91%,92%,93%,94%,95%{
+                transform: translateY(-3%);
+            }
+            100%{
+                transform: translateY(0%);
+            }
+        }
+        .toast-wrapper{
+            margin-top: -200px;
+            position: absolute;
+            justify-content: center;
+            text-align: center;
+        }
+        .toast-wrapper img{
+            width: 70%;
+        }
+        p{
+            padding: 0;
+            margin-top: -10%;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Ms Madi', chữ thảo;
+            animation: text-crush 2s forwards 1s;
+            cursor: pointer;
+        }
+        @keyframes text-crush{
+            0%{
+                color: black;
+            }
+            100%{
+                color: red;
+                filter: drop-shadow(0 0 15px red);
+            }
+        }
+        .icon{
+            font-size: 40px;
+            color: red;
+            opacity: 0;
+            padding: 0;
+            margin: 0;
+            transition: 1s;
+            cursor: pointer;
+            animation: mail 1s forwards 3s infinite;
+        }
+        @keyframes mail{
+            0%{
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+            20%,60%{
+                opacity: 1;
+                transform: rotate(5deg);
+            }
+            40%,80%{
+                opacity: 1;
+                transform: rotate(-5deg);
+            }
+            100%{
+                opacity: 1;
+            }
+        }
