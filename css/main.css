@@ -104,7 +104,7 @@ body{
                 width: 130px;
             }
         }
-        .content-wrapper{
+        .content{
             position: absolute;
             top: 70%;
             left: 50%;
@@ -124,7 +124,7 @@ body{
                 opacity: 1;
             }
         }
-        .content{
+        .content-wrapper{
             display: flex;
             justify-content: center;
             align-items: center;
